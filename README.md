@@ -12,3 +12,5 @@ It will then compute the overlap of each sdr with every other one.
 In the interest of time and space, I only compute a subset (10000) of SDRs from the 4 million plus chord configurations, and then only the overlap for ten of those. 
 
 Open the index.html to see the overlap.
+
+Remember to run a simple server.
