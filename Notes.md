@@ -1,0 +1,1 @@
+So at this point, I can see the overlap values and at a cursory glance, the chords that are the same are sharing the same active columns, which makes sense because there is a direct mapping between the input and columns, with the only special algorithm being the paring down of columns. 

@@ -17,7 +17,7 @@
         var width = 500
         var height = 500
 
-        data = await (d3.dsv(",", "/database/sdr_overlaps.txt", function (d) {
+        data = await (d3.dsv(",", "/database/overlaps.txt", function (d) {
             return Object.keys(d).map((p) => ({ "date": parseInt(p.trim()), "value": parseInt(d[p].trim()) }));
         }))
 
