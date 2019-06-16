@@ -19,7 +19,7 @@ Writer.write("database/chords.txt", 'database/sdrs.txt') { |reader, writer|
     reader.each_line do |line|
         count += 1
         p count if count % 1000 == 0
-        writer.write("#{layer.activate(line.chomp.split(", ").map(&:to_i)).keys}" + "\n")
+        writer.write("#{layer.activate(line.chomp.split(", ").map(&:to_i)).keys.shuffle[0...40].compact}" + "\n")
         break if count == 10000
     end
 }
@@ -35,12 +35,13 @@ Writer.write('database/sdrs.txt', "database/overlaps.txt") { |reader, writer|
     count = 0
     writer.write("#{(0...sdrs.length).to_a}"[1...-1] + "\n")
 
-    sdrs.each do |sdr|
+    sdrs.shuffle.each do |sdr|
         p count 
         count += 1
-        writer.write("#{(0...sdrs.length).to_a.reduce([]) { |acc, idx2| acc << (sdr & sdrs[idx2]).length; acc }}"[1...-1] + "\n")
-        break if count == 10
+        writer.write("#{(0...sdrs.length).to_a.reduce([]) { |acc, idx2| acc << (sdr & sdrs[idx2]).length / 40.0 * 100; acc }}"[1...-1] + "\n")
+        break if count == 30
     end
 
     p 'Finished'
 }
+

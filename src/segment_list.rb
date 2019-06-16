@@ -1,8 +1,12 @@
 class SegmentList   
     attr_accessor :segments
+    def self.generate(input_length, columns, multiplier)
+        c = Array.new(multiplier * columns) { rand(columns) }
+        self.new(c.each_slice((columns * multiplier)/input_length).map { |slice| Segment.generate(slice) })
+    end
 
-    def initialize(length = 88)
-        @segments = Array.new(length) { Segment.generate } #introducting some serious randomness here.
+    def initialize(segments)
+        @segments = segments
     end
 
     # return active segments
