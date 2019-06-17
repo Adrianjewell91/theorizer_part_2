@@ -4,6 +4,9 @@ To Run:
 create a folder /database
 in terminal run: ``` ruby src/main.rb ```
 
+If nothing happens intially, it’s because the first wrtie is 4 million entries and I have no progress bar.
+then the next two writes are progressed, and then the cycle will happen once again.
+
 This is generator all possible configurations of the a Major chord.
 It will generate an sdr against a randomly generated set of synpases that connect the input to a collection 2048 columns.
 
