@@ -1,7 +1,7 @@
 Theorizer Part 2 begins my attempt to build a turing machine for musicians, for which the first step is to build a machine that learns to classify chord spaces given inputs. 
 
 To Run:
-
+create a folder /database
 in terminal run: ``` ruby generators/main.rb ```
 
 This is generator all possible configurations of the a Major chord.

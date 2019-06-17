@@ -7,4 +7,8 @@ class Writer
 
         write.close
     end
+
+    def self.to_array(string)
+        string.chomp.split(", ").map(&:to_i)
+    end
 end

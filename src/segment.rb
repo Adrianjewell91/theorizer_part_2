@@ -1,6 +1,6 @@
 class Segment 
     attr_accessor :synapses 
-    def self.generate(columns)
+    def self.generate(columns = [])
         self.new(columns.map{ |column| Synapse.new(column, rand) })
     end
 

@@ -1,8 +1,14 @@
 class SegmentList   
     attr_accessor :segments
     def self.generate(input_length, columns, multiplier)
-        c = Array.new(multiplier * columns) { rand(columns) }
-        self.new(c.each_slice((columns * multiplier)/input_length).map { |slice| Segment.generate(slice) })
+        # c = Array.new(multiplier * columns) { rand(columns) }
+        self.new(
+            Array.new(multiplier * columns) { 
+               rand(columns) 
+            }.each_slice((columns * multiplier)/input_length).map { |slice| 
+               Segment.generate(slice) 
+            }
+        )
     end
 
     def initialize(segments)

@@ -13,7 +13,7 @@ class Layer
                 columns[synapse.destination] += 1 if synapse.permanence > synapse.threshold; 
             end
             columns
-        end
+        end.keys.shuffle[0...40].compact
         # Inhibition
         # and Learning the new situation.
     end
