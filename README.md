@@ -2,7 +2,7 @@ Theorizer Part 2 begins my attempt to build a turing machine for musicians, for 
 
 To Run:
 create a folder /database
-in terminal run: ``` ruby generators/main.rb ```
+in terminal run: ``` ruby src/main.rb ```
 
 This is generator all possible configurations of the a Major chord.
 It will generate an sdr against a randomly generated set of synpases that connect the input to a collection 2048 columns.
